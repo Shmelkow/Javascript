@@ -74,41 +74,37 @@ console.log("Наибольшее число главной диагонали: 
 
 //===============================//
 
+let matrixElement1 = matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)];
+
+let matrixElement2 = matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)];
+
+console.log("Элемент матрицы: ", matrixElement1);
+console.log("Элемент матрицы: ", matrixElement2);
+
 let mul = function(a, b) {
-    console.log("Элемент матрицы: ", a);
-    console.log("Элемент матрицы: ", b);
     return a * b;
 }
 
-console.log("Функция mul:", mul(
-    matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
-    matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)])
-    );
+console.log("Функция mul:", mul(matrixElement1, matrixElement2));
 
 //===============================//
 
 let operations = function(num1, num2, operation) {
     switch (operation) {
         case "+":
-            num1 + num2;
-            break;
+            return num1 + num2;
         case "-":
-            num1 - num2;
-            break;
+            return num1 - num2;
         case "*":
-            num1 * num2;
-            break;
+            return num1 * num2;
         case "/":
-            num1 / num2;
-            break;
+            return num1 / num2;
         default:
-            alert("Введите правильно математическую операцию");
+            return alert("Введите правильно математическую операцию");
     }
 }
 let operation = prompt("Введите математическую операцию");
-// console.log("Функция operations:", operations(
-//     matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
-//     matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
-//     operation)
-// );
-console.log("Функция operations: ", operations(2, 3, "+"));
+
+ console.log("Функция operations:", operations(matrixElement1, matrixElement2, operation));
+
+//===============================//
