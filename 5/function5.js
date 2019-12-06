@@ -75,7 +75,15 @@ console.log("Наибольшее число главной диагонали: 
 //===============================//
 
 let mul = function(a, b) {
+    console.log("Элемент матрицы: ", a);
+    console.log("Элемент матрицы: ", b);
     return a * b;
 }
 
-console.log("Функция mul:", mul());
+console.log("Функция mul:", mul(matrix
+    [randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
+    matrix
+    [randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)])
+    );
+
+//===============================//
