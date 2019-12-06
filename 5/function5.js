@@ -80,10 +80,35 @@ let mul = function(a, b) {
     return a * b;
 }
 
-console.log("Функция mul:", mul(matrix
-    [randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
-    matrix
-    [randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)])
+console.log("Функция mul:", mul(
+    matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
+    matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)])
     );
 
 //===============================//
+
+let operations = function(num1, num2, operation) {
+    switch (operation) {
+        case "+":
+            num1 + num2;
+            break;
+        case "-":
+            num1 - num2;
+            break;
+        case "*":
+            num1 * num2;
+            break;
+        case "/":
+            num1 / num2;
+            break;
+        default:
+            alert("Введите правильно математическую операцию");
+    }
+}
+let operation = prompt("Введите математическую операцию");
+// console.log("Функция operations:", operations(
+//     matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
+//     matrix[randomNumber(0, arrLength - 1)][randomNumber(0, arrLength - 1)],
+//     operation)
+// );
+console.log("Функция operations: ", operations(2, 3, "+"));
