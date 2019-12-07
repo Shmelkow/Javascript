@@ -108,5 +108,15 @@ let operation = prompt("Введите математическую операц
  console.log("Функция operations:", operations(matrixElement1, matrixElement2, operation));
 
 //===============================// 
-//Создайте функцию, которая принимает в себя, массив и функцию. В созданной функции переберите 
-//циклом массив и для каждого элемента массива вызовете переданную вторую функцию
+
+let functionForArray = function(array, func) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            array[i][j] = mul(array[i][j], array[i][j]);
+        }
+    }
+    return array;
+}
+console.log("Массив с функцией: ", functionForArray(matrix, mul));
+
+//===============================// 
